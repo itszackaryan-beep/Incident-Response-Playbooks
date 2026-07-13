@@ -1,6 +1,8 @@
 # Incident-Response-Playbooks
 Developed SOC Incident  Response Playbooks For ransomware , brute force , and exfiltration scenarios aligned with NIST IR framework
 Write detailed IR Playbooks for 3 scenarios: (1)Ransomware attack, (2) Brute Force / Credential stuffing, (3) Data exfiltration. Each Playbook must include: detection logic , triage steps, containment actions, eradication steps, recovery checklist, and post-incident review template.
+## SOC Incident Response Playbooks
+A collection of professionally structured Security Operations Center (SOC) Incident Response Playbooks aligned with the NIST SP 800-61 Rev.2 Incident Response Framework. This repository provides standardized procedures for detecting, investigating, containing, eradicating, recovering from, and documenting common cybersecurity incidents
 # 📂 Repository Structur
 ```
 Incident-Response-Playbooks/
