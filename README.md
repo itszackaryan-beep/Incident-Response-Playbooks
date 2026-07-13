@@ -90,3 +90,103 @@ Every playbook follows the same structured workflow.
 4. Eradication
 5. Recovery
 6. Post-Incident Review
+  # How to Use This Project
+  ## Step 1
+  Open the playbooks folder.
+
+Choose the incident type you want to study.
+
+Examples:
+
+- Ransomware
+- Brute Force
+- Data Exfiltration
+  # Step 2
+
+Read the Detection Logic section to understand how the incident is identified.
+# Step 3
+
+Follow the Initial Triage checklist.
+
+Collect:
+
+- Event Logs
+- Process Information
+- User Details
+- Host Information
+- Network Connections
+ # Step 4
+
+Execute the Containment Actions.
+
+Examples:
+
+- Isolate the affected system.
+- Disable compromised accounts.
+- Block malicious IP addresses.
+- Stop malicious processes.
+  # Step 5
+
+Perform Eradication.
+
+Examples:
+
+- Remove malware.
+- Delete persistence mechanisms.
+- Patch vulnerabilities.
+- Reset passwords.
+ # Step 6
+
+Complete the Recovery Checklist.
+
+Examples:
+
+- Restore from backup.
+- Validate system integrity.
+- Enable monitoring.
+- Verify security controls.
+#  Step 7
+
+Document the incident using the templates provided in the templates folder.
+# Templates Included
+- Incident Report Template
+- IOC Checklist
+- Post-Incident Review Template
+
+These templates help document incidents consistently across investigations.
+
+# Skills Demonstrated
+- Incident Response
+- SOC Operations
+- SIEM Investigation
+- Threat Detection
+- Log Analysis
+- IOC Analysis
+- Malware Investigation
+- Ransomware Response
+- Authentication Investigation
+- Data Exfiltration Analysis
+- Digital Forensics Fundamentals
+- Documentation
+- Security Operations
+- NIST Incident Response
+- MITRE ATT&CK
+# Learning Outcomes
+
+After reviewing these playbooks, users will understand how to:
+
+- Detect cybersecurity incidents.
+- Investigate suspicious activities.
+- Contain security breaches.
+- Eradicate malicious threats.
+- Recover affected systems.
+- Document security incidents.
+- Conduct post-incident reviews.
+  #👨‍💻 Author
+
+**SUMIT KUMAR**
+
+SOC Analyst | Cybersecurity Enthusiast
+#📄 License
+
+This project is intended for educational purposes and cybersecurity portfolio demonstrations.
