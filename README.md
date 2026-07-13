@@ -182,7 +182,7 @@ After reviewing these playbooks, users will understand how to:
 - Recover affected systems.
 - Document security incidents.
 - Conduct post-incident reviews.
-  #👨‍💻 Author
+  # 👨‍💻 Author
 
 **SUMIT KUMAR**
 
