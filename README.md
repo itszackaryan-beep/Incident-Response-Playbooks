@@ -12,12 +12,13 @@ Each playbook is designed to help analysts handle incidents from initial detecti
 - Improve SOC investigation and response consistency.
 - Document incident handling activities.
 - Demonstrate practical Incident Response skills for a cybersecurity portfolio.
-# 📂 Repository Structur
+# 📂 Repository Structure
 ```
 Incident-Response-Playbooks/
 │
 ├── README.md
 ├── LICENSE
+│
 ├── playbooks/
 │   ├── 01_Ransomware_Playbook.md
 │   ├── 02_Brute_Force_Credential_Stuffing.md
@@ -28,13 +29,30 @@ Incident-Response-Playbooks/
 │   ├── Post_Incident_Review.md
 │   └── IOC_Checklist.md
 │
+├── docs/
+│   └── NIST_IR_Framework.md
+│
 ├── diagrams/
 │   ├── ransomware_flow.png
 │   ├── bruteforce_flow.png
 │   └── data_exfiltration_flow.png
 │
-└── docs/
-    └── NIST_IR_Framework.md
+└── evidence/
+    │
+    ├── ransomware/
+    │   ├── screenshots/
+    │   ├── logs/
+    │   └── investigation_notes.md
+    │
+    ├── brute_force/
+    │   ├── screenshots/
+    │   ├── logs/
+    │   └── investigation_notes.md
+    │
+    └── data_exfiltration/
+        ├── screenshots/
+        ├── logs/
+        └── investigation_notes.md
 ```
 # Include Playbooks
 ## 1. Ransomware Attack
