@@ -37,7 +37,8 @@ Incident-Response-Playbooks/
     └── NIST_IR_Framework.md
 ```
 # Include Playbooks
-## 1.Ransomware Attack
+## 1. Ransomware Attack
+
 Covers the complete response process for ransomware incidents including:
 - Detection Logic
 - Initial Triage
@@ -45,3 +46,47 @@ Covers the complete response process for ransomware incidents including:
 - Eradication
 - Recovery
 - Lessons Learned
+# 2. Brute Force / Credential stuffing
+
+Provides procedures for investigating authentication attacks.
+Include:
+- Login Failure Detection
+- Account Validation
+- Containment
+- Password Reset
+- Recovery
+- Documentation
+# 3. Data Exfiltration
+
+Designed for unauthorized data transfer investigations.
+Include:
+- Network Traffic Analysis
+- DLP Investigation
+- Containment
+- Malware Removal
+- Recovery
+- Incident Documentation
+# Technologies & Tools
+- Splunk Enterprise
+- Windows Event Logs
+- Sysmon
+- Microsoft Defender
+- Wireshark
+- VirusTotal
+- Any.Run
+- PowerShell
+- Event Viewer
+ # Frameworks Used
+- NIST SP 800-61 Rev.2
+- MITRE ATT&CK Framework
+- Cyber Kill Chain (Reference)
+#  Incident Response Lifecycle
+
+Every playbook follows the same structured workflow.
+
+1. Detection & Analysis
+2. Initial Triage
+3. Containment
+4. Eradication
+5. Recovery
+6. Post-Incident Review
