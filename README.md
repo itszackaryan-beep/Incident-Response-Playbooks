@@ -7,11 +7,11 @@ A collection of professionally structured Security Operations Center (SOC) Incid
 Security Operations Center (SOC) analysts follow documented Incident Response (IR) procedures to respond to cyber threats consistently and efficiently. This project contains three practical incident response playbooks that simulate real-world SOC workflows.
 Each playbook is designed to help analysts handle incidents from initial detection through post-incident review.
 ## Project Objectives
-#1.Develop standardized Incident Response procedures.
-##2.Follow the NIST Incident Response Lifecycle.
-###3.Improve SOC investigation and response consistency.
-####4.Document incident handling activities.
-#####5.Demonstrate practical Incident Response skills for a cybersecurity portfolio.
+-1.Develop standardized Incident Response procedures.
+-2.Follow the NIST Incident Response Lifecycle.
+-3.Improve SOC investigation and response consistency.
+-4.Document incident handling activities.
+-5.Demonstrate practical Incident Response skills for a cybersecurity portfolio.
 # 📂 Repository Structur
 ```
 Incident-Response-Playbooks/
