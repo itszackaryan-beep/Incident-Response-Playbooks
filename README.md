@@ -36,3 +36,12 @@ Incident-Response-Playbooks/
 └── docs/
     └── NIST_IR_Framework.md
 ```
+# Include Playbooks
+## 1.Ransomware Attack
+Covers the complete response process for ransomware incidents including:
+- Detection Logic
+- Initial Triage
+- Containment
+- Eradication
+- Recovery
+- Lessons Learned
