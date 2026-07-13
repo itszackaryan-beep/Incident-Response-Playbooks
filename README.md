@@ -187,6 +187,6 @@ After reviewing these playbooks, users will understand how to:
 **SUMIT KUMAR**
 
 SOC Analyst | Cybersecurity Enthusiast
-#📄 License
+# 📄 License
 
 This project is intended for educational purposes and cybersecurity portfolio demonstrations.
