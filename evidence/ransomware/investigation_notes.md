@@ -14,6 +14,9 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ### Evidence
 - Screenshot 01: Splunk Security Logs
 - Screenshot 02: Windows Event Viewer Security Logs
+## Additional Evidence
+- Screenshot 03 – Sysmon Download and Extract
+- Screenshot 04 – Investigation Notes  
 
 ### Status
 ✅ Completed
