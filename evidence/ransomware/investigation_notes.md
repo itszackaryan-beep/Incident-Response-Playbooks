@@ -23,7 +23,7 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 
 ### Screenshot 01 - Splunk Security Logs
 
-![Screenshot 01](evidence/ransomware/screenshots/01_Splunk_Security_Logs.jpg)
+![Screenshot 01](evidence/ransomware/screenshots/01_windows_security_event_viewer.jpg)
 
 **Description:** Splunk successfully collected Windows Security Event Logs.
 
