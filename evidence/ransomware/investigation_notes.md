@@ -22,6 +22,10 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ## Evidence Screenshots
 
 ### Screenshot 01 - Splunk Security Logs
+**Observation:**
+- Splunk successfully received Windows Security Event Logs.
+- Security events were indexed correctly without errors.
+
 
 ![Screenshot 02](screenshots/02_splunk_security_logs.jpg)
 
@@ -30,6 +34,9 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ---
 
 ### Screenshot 02 - Windows Event Viewer Security Logs
+**Observation:**
+- Windows Security Event Viewer displayed successful log generation.
+- Login and security events were available for analysis.
 
 ![Screenshot 01](screenshots/01_windows_security_event_viewer.jpg)
 
@@ -38,6 +45,10 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ---
 
 ### Screenshot 03 - Sysmon Download and Extract
+**Observation:**
+- Sysmon package was successfully downloaded and extracted.
+- The extracted files were ready for installation and endpoint monitoring configuration.
+
 
 ![Screenshot 03](screenshots/03_Sysmon_Download_and_Extract.jpg.png
 )
@@ -47,6 +58,10 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ---
 
 ### Screenshot 04 - Investigation Notes
+**Observation:**
+- Investigation findings were documented successfully.
+- Log verification confirmed that Windows Security logs were collected by Splunk.
+- The evidence was reviewed and the investigation step was marked as completed.
 
 ![Screenshot 04](screenshots/04_Sysmon_Operational_Logs.jpg)
 
