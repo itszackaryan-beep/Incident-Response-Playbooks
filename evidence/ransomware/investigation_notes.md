@@ -31,7 +31,7 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 
 ### Screenshot 02 - Windows Event Viewer Security Logs
 
-![Screenshot 01](screenshots/01_Windows_Event_Viewer_Security_Logs.jpg)
+![Screenshot 02](screenshots/01_Windows_Event_Viewer_Security_Logs.jpg)
 
 **Description:** Windows Event Viewer displaying Security logs generated during testing.
 
