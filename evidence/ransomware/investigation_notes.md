@@ -69,3 +69,18 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 ![Screenshot 04](screenshots/04_Sysmon_Operational_Logs.jpg)
 
 **Description:** Final investigation notes documenting log verification and observations.
+### Step 2 – Sysmon Verification
+
+**Objective**
+Verify that Sysmon is installed successfully and generating endpoint monitoring logs.
+
+**Observations**
+- Sysmon service is running successfully.
+- Sysmon Operational logs are visible in Event Viewer.
+- Endpoint monitoring is functioning correctly.
+
+**Evidence**
+- Screenshot 05 – Sysmon Operational Log
+
+**Status**
+✅ Completed
