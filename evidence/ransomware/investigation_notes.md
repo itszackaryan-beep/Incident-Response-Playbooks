@@ -96,7 +96,7 @@ Verify that Sysmon is installed successfully and generating endpoint monitoring 
 
 ### Screenshot 05 – Sysmon Operational Log
 
-![Screenshot 05](screenshots/05_Sysmon_Operational_Log.jpg)
+![Screenshot 05](screenshots/05_Sysmon_Operational_Log(1).jpg)
 
 **Description:**
 This screenshot confirms that Sysmon is successfully installed and actively generating operational events in Windows Event Viewer.
