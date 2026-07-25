@@ -16,7 +16,7 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 - Screenshot 02: Windows Event Viewer Security Logs
 ## Additional Evidence
 - Screenshot 03 – Sysmon Download and Extract
-- Screenshot 04 – Investigation Notes  
+- Screenshot 04 – sysmon Operational logs  
 
 ### Status
 ✅ Completed
@@ -70,7 +70,7 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 
 **Description:** Final investigation notes documenting log verification and observations.
 ---
-## Step 2 – Sysmon Installation and Configuration Verification
+## Step 2 – Verify that Microsoft Sysmon is successfully installed and that Sysmon Operational logs are collected by Splunk Enterprise.
 
 **Date:** (Today's Date)
 
@@ -78,13 +78,11 @@ Verify that Windows Security Event Logs are being collected by Splunk.
 Verify that Microsoft Sysmon is successfully installed and configured on Windows Server 2022 for advanced endpoint monitoring and security event collection.
 
 ### Observations
-- Microsoft Sysmon was successfully installed on Windows Server 2022.
-- A custom Sysmon configuration file was applied successfully.
-- The `Sysmon64` service was verified to be in the **RUNNING** state.
-- Sysmon is actively monitoring endpoint activity and is ready to forward detailed telemetry for Splunk SIEM analysis.
-
+- Microsoft Sysmon was successfully installed.
+- Sysmon Operational logs were generated successfully.
+- Splunk successfully received Sysmon Operational logs.
 ### Evidence
-- Screenshot 05: Sysmon Installation and Configuration Verification
+- Screenshot 05: Sysmon logs in splunk
 
 ### Status
 ✅ Completed
@@ -92,5 +90,5 @@ Verify that Microsoft Sysmon is successfully installed and configured on Windows
 ![Screenshot 05](screenshots/05_Sysmon_Operational_Log(1).jpg)
 
 **Description:**
-This screenshot confirms that Sysmon is successfully installed and actively generating operational events in Windows Event Viewer.
+This screenshot confirms that Sysmon Operational events were successfully collected and indexed in Splunk Enterprise.
 
