@@ -198,6 +198,8 @@ Simulate ransomware-like file activity on Windows Server 2022 and verify that Mi
 > Simulated file creation, modification, rename, and deletion inside the ransomware test folder.
 
 **Screenshot 09 – File Activity in Splunk**
+![Screenshot 09](screenshots/09_File_Activity_in_Splunk.jpg)
+
 
 > Splunk Enterprise displaying Sysmon File Activity events generated during the simulation.
 
