@@ -146,6 +146,7 @@ Simulate suspicious process activity on Windows Server 2022 and verify that Micr
 ---
 
 ## Screenshot 06
+![Screenshot 06](screenshots/06_Suspicious_Process_Activity.jpg)
 
 **Description**
 
@@ -154,7 +155,7 @@ Windows Server 2022 showing Command Prompt and PowerShell executing test command
 ---
 
 ## Screenshot 07
-
+![Screenshot 07](07_Process_Creation_Events_in_Splunk.jpg)
 **Description**
 
 Splunk Enterprise displaying Sysmon Process Creation (Event ID 1) events generated during the activity simulation.
@@ -164,7 +165,7 @@ Splunk Enterprise displaying Sysmon Process Creation (Event ID 1) events generat
 ## SPL Query Used
 
 ```spl
-index=soc_lab EventCode=1
+index=main EventCode=1
 ```
 
 ---
