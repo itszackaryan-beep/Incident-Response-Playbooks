@@ -155,7 +155,7 @@ Windows Server 2022 showing Command Prompt and PowerShell executing test command
 ---
 
 ## Screenshot 07
-![Screenshot 07](07_Process_Creation_Events_in_Splunk.jpg)
+![Screenshot 07](screenshots/07_Process_Creation_Events_in_Splunk.jpg)
 **Description**
 
 Splunk Enterprise displaying Sysmon Process Creation (Event ID 1) events generated during the activity simulation.
