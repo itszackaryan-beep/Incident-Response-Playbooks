@@ -173,3 +173,48 @@ index=main EventCode=1
 ## Result
 
 The simulated process activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise, confirming that endpoint monitoring is functioning correctly.
+## Step 4 – File Activity Simulation
+
+### Objective
+Simulate ransomware-like file activity on Windows Server 2022 and verify that Microsoft Sysmon captures the generated events in Splunk Enterprise.
+
+### Tasks Performed
+- Created a test folder (`C:\Ransomware_Test`)
+- Created multiple test files
+- Modified and renamed files
+- Deleted a test file
+- Verified Sysmon File Activity events in Splunk
+
+### Observations
+- File activity events were generated successfully.
+- Microsoft Sysmon monitored file operations.
+- Splunk Enterprise successfully indexed the generated events.
+- The collected logs can be used for ransomware detection and investigation.
+
+### Evidence
+
+**Screenshot 08 – File Activity on Windows Server**
+
+> Simulated file creation, modification, rename, and deletion inside the ransomware test folder.
+
+**Screenshot 09 – File Activity in Splunk**
+
+> Splunk Enterprise displaying Sysmon File Activity events generated during the simulation.
+
+### SPL Query
+
+```spl
+index=main EventCode=11
+```
+
+> If additional events are available:
+
+```spl
+index=main (EventCode=11 OR EventCode=23 OR EventCode=26)
+```
+
+### Result
+
+The simulated file activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of detecting suspicious file operations commonly associated with ransomware behavior.
+
+**Status:** ✅ Completed
