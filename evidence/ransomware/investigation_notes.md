@@ -87,7 +87,7 @@ Verify that Microsoft Sysmon is successfully installed and configured on Windows
 ### Status
 ✅ Completed
 
-![Screenshot 05](screenshots/05_Sysmon_Operational_Log(1).jpg)
+![Screenshot 05](screenshots/05_Sysmon_Logs_in_Splunk.jpg)
 
 **Description:**
 This screenshot confirms that Sysmon Operational events were successfully collected and indexed in Splunk Enterprise.
