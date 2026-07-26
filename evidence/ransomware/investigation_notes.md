@@ -103,3 +103,72 @@ This screenshot confirms that Sysmon Operational events were successfully collec
 
 Windows Security Event Logs and Microsoft Sysmon Operational Logs were successfully collected and indexed in Splunk Enterprise. The logging pipeline was verified, confirming that the environment is ready for further incident response and ransomware detection activities.
 
+# Step 3 – Suspicious Process Activity Simulation
+
+## Objective
+
+Simulate suspicious process activity on Windows Server 2022 and verify that Microsoft Sysmon captures the events in Splunk Enterprise.
+
+---
+
+## Tasks Performed
+
+- Opened Command Prompt (cmd.exe)
+- Opened Windows PowerShell
+- Executed basic Windows commands:
+  - whoami
+  - ipconfig
+  - tasklist
+- Verified that Microsoft Sysmon generated Process Creation events (Event ID 1).
+- Confirmed that Splunk Enterprise successfully indexed the generated events.
+
+---
+
+## Observations
+
+- Sysmon successfully monitored process execution.
+- Process Creation events were generated.
+- Splunk successfully received and indexed the Sysmon events.
+- The activity can be used for security monitoring and incident investigation.
+
+---
+
+## Evidence
+
+**Screenshot 06 – Suspicious Process Activity**
+
+**Screenshot 07 – Process Creation Events in Splunk**
+
+**Status**
+
+✅ Completed
+
+---
+
+## Screenshot 06
+
+**Description**
+
+Windows Server 2022 showing Command Prompt and PowerShell executing test commands to generate Sysmon events.
+
+---
+
+## Screenshot 07
+
+**Description**
+
+Splunk Enterprise displaying Sysmon Process Creation (Event ID 1) events generated during the activity simulation.
+
+---
+
+## SPL Query Used
+
+```spl
+index=soc_lab EventCode=1
+```
+
+---
+
+## Result
+
+The simulated process activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise, confirming that endpoint monitoring is functioning correctly.
