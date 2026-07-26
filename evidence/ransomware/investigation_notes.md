@@ -82,7 +82,15 @@ Verify that Microsoft Sysmon is successfully installed and configured on Windows
 - Sysmon Operational logs were generated successfully.
 - Splunk successfully received Sysmon Operational logs.
 ### Evidence
-- Screenshot 05: Sysmon logs in splunk
+- Screenshot 05 – Sysmon Logs in Splunk
+
+Observation:
+• Sysmon Operational events were successfully indexed in Splunk.
+• Splunk is receiving endpoint telemetry from Microsoft Sysmon.
+
+Description:
+Splunk Enterprise displaying Sysmon Operational events collected from Windows Server 2022.
+- 
 
 ### Status
 ✅ Completed
@@ -91,4 +99,7 @@ Verify that Microsoft Sysmon is successfully installed and configured on Windows
 
 **Description:**
 This screenshot confirms that Sysmon Operational events were successfully collected and indexed in Splunk Enterprise.
+Conclusion
+
+Windows Security Event Logs and Microsoft Sysmon Operational Logs were successfully collected and indexed in Splunk Enterprise. The logging pipeline was verified, confirming that the environment is ready for further incident response and ransomware detection activities.
 
