@@ -99,7 +99,7 @@ Splunk Enterprise displaying Sysmon Operational events collected from Windows Se
 
 **Description:**
 This screenshot confirms that Sysmon Operational events were successfully collected and indexed in Splunk Enterprise.
-Conclusion
+### Conclusion
 
 Windows Security Event Logs and Microsoft Sysmon Operational Logs were successfully collected and indexed in Splunk Enterprise. The logging pipeline was verified, confirming that the environment is ready for further incident response and ransomware detection activities.
 
