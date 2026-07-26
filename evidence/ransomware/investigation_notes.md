@@ -194,6 +194,7 @@ Simulate ransomware-like file activity on Windows Server 2022 and verify that Mi
 ### Evidence
 
 **Screenshot 08 – File Activity on Windows Server**
+![Screenshot 08](screenshots/08_File_Activity_on_Windows_Server.jpg)
 
 > Simulated file creation, modification, rename, and deletion inside the ransomware test folder.
 
