@@ -221,19 +221,7 @@ index=main (EventCode=11 OR EventCode=23 OR EventCode=26)
 The simulated file activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of detecting suspicious file operations commonly associated with ransomware behavior.
 
 **Status:** ✅ Completed
-### Sample Ransom Note
 
-```text
-==============================
-YOUR FILES HAVE BEEN ENCRYPTED
-==============================
-
-This is a safe ransomware simulation created for cybersecurity lab testing.
-
-No files were actually encrypted or damaged.
-
-Contact: attacker@example.com
-```
 # Step 5 – Simulated Ransom Note Creation
 
 ## Objective
@@ -266,6 +254,19 @@ In this lab, a **safe ransomware simulation** was performed. **No real ransomwar
   - Timestamp
 
 ---
+### Sample Ransom Note
+
+```text
+==============================
+YOUR FILES HAVE BEEN ENCRYPTED
+==============================
+
+This is a safe ransomware simulation created for cybersecurity lab testing.
+
+No files were actually encrypted or damaged.
+
+Contact: attacker@example.com
+```
 
 ## Sample Ransom Note
 
