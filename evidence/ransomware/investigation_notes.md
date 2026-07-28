@@ -451,14 +451,17 @@ index=main (EventCode=1 OR EventCode=11)
 
 ## Evidence
 
-### Screenshot All - IOC Extraction
-
-- Screenshot 12 – IOC Extraction Search Query
+### Screenshot All - IOC Extraction 
 - Screenshot 13 – Process Create Event Details
+ ![Screenshot 13](screenshots/13_Process_Create_Event_Details.jpg) 
 - Screenshot 14 – File Create Event Details
+  ![Screenshot 14](screenshots/14_File_Create_Event_Details.jpg)
 - Screenshot 15 – IOC Information Fields
+  ![Screenshot 15](screenshots/15_IOC_Information_Fields.jpg)
 - Screenshot 16 – IOC Table View
+  ![Screenshot 16](screenshots/16_IOC_Table_View.jpg)
 - Screenshot 17 – README_RESTORE_FILES Search Result
+  ![Screenshot 17](screenshots/17_README_RESTORE_FILES_Search_Result.jpg)
 
 ---
 
