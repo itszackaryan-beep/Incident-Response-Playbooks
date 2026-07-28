@@ -251,3 +251,125 @@ The failed authentication attempts successfully generated Windows Security Event
 ## Status
 
 ⬜ Pending
+# Step 2 – Successful Login Verification
+
+## Objective
+
+Verify that a successful Windows authentication is recorded after multiple failed login attempts and that Windows Security **Event ID 4624** is successfully collected by Splunk Enterprise.
+
+---
+
+## Background
+
+Following repeated failed authentication attempts, a successful login generates **Windows Security Event ID 4624**. This event confirms that a user has successfully authenticated and helps security analysts correlate successful logins with previous failed login attempts during a brute force investigation.
+
+This step demonstrates that Splunk Enterprise can monitor both failed and successful authentication events within the Windows Security logs.
+
+---
+
+## Lab Components
+
+| Component | Description |
+|-----------|-------------|
+| Hypervisor | VMware Workstation |
+| Attacker Machine | Kali Linux |
+| Target Machine | Windows Server 2022 |
+| SIEM | Splunk Enterprise |
+| Log Source | Windows Security Event Logs |
+| Event ID | 4624 (Successful Logon) |
+
+---
+
+## Tasks Performed
+
+- Logged in to Windows Server 2022 using the correct Administrator credentials.
+- Verified that Windows Security generated **Event ID 4624**.
+- Confirmed that Splunk Enterprise successfully collected and indexed the successful authentication event.
+- Verified that the authentication event was available for security investigation.
+
+---
+
+## Observations
+
+- Successful authentication was completed.
+- Windows Security generated **Event ID 4624**.
+- Splunk Enterprise successfully indexed the authentication event.
+- Successful logon activity can be correlated with previous failed login attempts during brute force investigations.
+
+---
+
+# Evidence
+
+## Screenshot 07 – Successful Login on Windows Server
+
+**Filename**
+
+```text
+07_Successful_Login_On_Windows_Server.jpg
+```
+
+**Description**
+
+Windows Server 2022 desktop displayed after a successful Administrator login.
+
+> 📸 **Place Screenshot Here**
+
+---
+
+## Screenshot 08 – Event ID 4624 in Event Viewer
+
+**Filename**
+
+```text
+08_EventID4624_EventViewer.jpg
+```
+
+**Description**
+
+Windows Security Event Viewer displaying **Event ID 4624 (Successful Logon)** generated after successful authentication.
+
+> 📸 **Place Screenshot Here**
+
+---
+
+## Screenshot 09 – Event ID 4624 in Splunk
+
+**Filename**
+
+```text
+09_EventID4624_in_Splunk.jpg
+```
+
+**Description**
+
+Splunk Enterprise displaying Windows Security **Event ID 4624** collected from Windows Server 2022.
+
+> 📸 **Place Screenshot Here**
+
+---
+
+# SPL Query
+
+If Windows Security logs are stored in the **main** index:
+
+```spl
+index=main EventCode=4624
+```
+
+If Windows Security logs are stored in another index:
+
+```spl
+index=soc_lab EventCode=4624
+```
+
+---
+
+# Result
+
+The successful authentication generated **Windows Security Event ID 4624**, and Splunk Enterprise successfully collected and indexed the event. This confirms that the SIEM environment can detect legitimate authentication events and correlate them with previous failed login attempts.
+
+---
+
+# Status
+
+✅ Completed
