@@ -125,3 +125,129 @@ The attacker machine (Kali Linux) and the target machine (Windows Server 2022) w
 ## Status
 
 ✅ Completed
+# Step 1 – Failed Login Simulation
+
+## Objective
+
+Simulate multiple failed Windows login attempts and verify that Windows Security Event ID **4625** is generated and successfully collected by Splunk Enterprise.
+
+---
+
+## Background
+
+A brute force attack involves repeatedly attempting different passwords to gain unauthorized access to a user account. Windows records every failed authentication attempt as **Security Event ID 4625**.
+
+In this lab, a **safe simulation** is performed by intentionally entering incorrect credentials through Remote Desktop Protocol (RDP). No password cracking tools or malicious software are used.
+
+---
+
+## Lab Components
+
+| Component | Description |
+|-----------|-------------|
+| Attacker Machine | Kali Linux |
+| Target Machine | Windows Server 2022 |
+| SIEM | Splunk Enterprise |
+| Event ID | 4625 (Failed Logon) |
+
+---
+
+## Tasks Performed
+
+- Established an RDP connection from Kali Linux to Windows Server 2022.
+- Entered an incorrect password **5–10 times** for the Administrator account.
+- Verified that Windows Security generated **Event ID 4625**.
+- Confirmed that Splunk Enterprise successfully indexed the failed authentication events.
+
+---
+
+## Observations
+
+- Multiple failed login attempts were generated successfully.
+- Windows Security recorded Event ID **4625** for each failed authentication attempt.
+- Splunk Enterprise successfully received and indexed the authentication logs.
+- The generated events can be used to identify brute force attack activity.
+
+---
+
+# Evidence
+
+## Screenshot 03 – RDP Login Attempt from Kali Linux
+
+**Filename**
+
+```text
+03_RDP_Login_Attempt_From_Kali.jpg
+```
+
+**Description**
+
+Kali Linux initiating a Remote Desktop connection to Windows Server 2022 for authentication testing.
+
+---
+
+## Screenshot 04 – Failed Login Message
+
+**Filename**
+
+```text
+04_Failed_Login_Message.jpg
+```
+
+**Description**
+
+Windows Server displaying an authentication failure after an incorrect password was entered.
+
+---
+
+## Screenshot 05 – Event ID 4625 in Event Viewer
+
+**Filename**
+
+```text
+05_EventID4625_EventViewer.jpg
+```
+
+**Description**
+
+Windows Security Event Viewer displaying Event ID 4625 generated during the failed login attempts.
+
+---
+
+## Screenshot 06 – Event ID 4625 in Splunk
+
+**Filename**
+
+```text
+06_EventID4625_in_Splunk.jpg
+```
+
+**Description**
+
+Splunk Enterprise displaying Windows Security Event ID 4625 collected from Windows Server 2022.
+
+---
+
+## SPL Query
+
+```spl
+index=main EventCode=4625
+```
+
+If your Windows Security logs are stored in another index:
+
+```spl
+index=soc_lab EventCode=4625
+```
+
+---
+
+## Result
+
+The failed authentication attempts successfully generated Windows Security Event ID 4625. Splunk Enterprise collected and indexed the events, confirming that the SIEM environment can detect brute force login attempts.
+
+---
+
+## Status
+
+⬜ Pending
