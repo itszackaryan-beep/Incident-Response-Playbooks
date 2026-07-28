@@ -221,3 +221,57 @@ index=main (EventCode=11 OR EventCode=23 OR EventCode=26)
 The simulated file activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of detecting suspicious file operations commonly associated with ransomware behavior.
 
 **Status:** ✅ Completed
+## Step 5 – Simulated Ransom Note Creation
+
+### Objective
+Simulate the final stage of a ransomware attack by creating a ransom note and verify that Microsoft Sysmon detects the file creation activity in Splunk Enterprise.
+
+### Background
+Most ransomware families create a ransom note after encrypting files. The note usually contains payment instructions and informs the victim that their files have been encrypted. In this lab, a **safe simulation** is performed without using any real ransomware or encryption.
+
+### Tasks Performed
+- Created a simulated ransom note named **README_RESTORE_FILES.txt** inside the **Ransomware_Test** folder.
+- Added a sample ransom message to imitate real ransomware behavior.
+- Verified that Microsoft Sysmon generated a **File Create (Event ID 11)** event.
+- Confirmed that Splunk Enterprise successfully collected and indexed the generated event.
+
+### Sample Ransom Note
+
+```text
+==============================
+YOUR FILES HAVE BEEN ENCRYPTED
+==============================
+
+This is a safe ransomware simulation created for cybersecurity lab testing.
+
+No files were actually encrypted or damaged.
+
+Contact: attacker@example.com
+```
+
+### Observations
+- The simulated ransom note was successfully created.
+- Microsoft Sysmon detected the file creation event.
+- Splunk Enterprise successfully indexed the generated event.
+- The activity demonstrates how defenders can detect ransomware indicators before performing incident response.
+
+### Evidence
+- **Screenshot 10 – Simulated Ransom Note**
+- **Screenshot 11 – Ransom Note Detection in Splunk**
+
+### SPL Query
+
+```spl
+index=main EventCode=11 README_RESTORE_FILES
+```
+
+**Alternative Query**
+
+```spl
+index=main EventCode=11
+```
+
+### Result
+The simulated ransom note was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of identifying ransomware indicators such as ransom note creation and supporting incident response investigations.
+
+**Status:** ✅ Completed
