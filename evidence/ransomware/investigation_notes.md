@@ -465,3 +465,68 @@ index=main (EventCode=1 OR EventCode=11)
 The generated Sysmon events successfully provided valuable Indicators of Compromise (IOCs), including process execution details, file creation activity, user information, host name, timestamps, and file paths. These artifacts can assist security analysts in identifying ransomware behavior and performing incident investigations.
 
 **Status:** ✅ Completed
+# Step 7 – Incident Timeline Analysis
+
+## Objective
+Create a timeline of the simulated ransomware activity using Microsoft Sysmon events collected in Splunk Enterprise.
+
+## Timeline of Events
+
+| Time (Approx.) | Activity | Sysmon Event ID | Description |
+|----------------|----------|-----------------|-------------|
+| 12:20:22 AM | CMD Executed | Event ID 1 | Command Prompt launched to prepare the ransomware simulation. |
+| 12:20:29 AM | Test Files Created | Event ID 11 | Sample files were created inside the Ransomware_Test folder. |
+| 12:23:45 AM | Files Renamed | Event ID 11 | Test files were renamed with a simulated ransomware extension. |
+| 12:29:08 AM | Ransom Note Created | Event ID 11 | README_RESTORE_FILES.txt was created in the Ransomware_Test folder. |
+| 12:29:14 AM | Notepad Opened | Event ID 1 | README_RESTORE_FILES.txt was opened using Notepad.exe for verification. |
+| 12:29:15 AM | Splunk Detection | Event ID 11 | Splunk successfully indexed the ransomware note creation event. |
+
+## SPL Query
+
+```spl
+index=main README_RESTORE_FILES
+```
+
+or
+
+```spl
+index=main (EventCode=1 OR EventCode=11)
+```
+
+## Evidence
+
+- Screenshot 16 – Incident Timeline Search
+- Screenshot 17 – Timeline Events in Splunk
+
+## Result
+
+The collected Sysmon events clearly show the sequence of activities performed during the ransomware simulation. The timeline demonstrates how security analysts can reconstruct attacker behavior from process creation and file creation events.
+# Step 8 – MITRE ATT&CK Mapping
+
+## Objective
+
+Map the observed ransomware simulation activities to the MITRE ATT&CK Framework.
+
+## MITRE ATT&CK Mapping
+
+| Observed Activity | MITRE Technique | Technique ID |
+|-------------------|-----------------|--------------|
+| Command Prompt Execution | Command and Scripting Interpreter: Windows Command Shell | T1059.003 |
+| Notepad Execution | User Execution | T1204 |
+| File Creation | Data Encrypted for Impact (Simulated) | T1486 |
+| Ransom Note Creation | Data Encrypted for Impact (Simulation) | T1486 |
+| File Rename Activity | Data Encrypted for Impact (Simulation) | T1486 |
+
+## Explanation
+
+Although no real malware or encryption was executed, the simulated behavior closely resembles the final stages of a ransomware attack. Microsoft Sysmon successfully captured process creation and file creation events, allowing Splunk Enterprise to detect activities commonly associated with ransomware operations.
+
+## Evidence
+
+- Screenshot 18 – Process Creation (Event ID 1)
+- Screenshot 19 – File Creation (Event ID 11)
+- Screenshot 20 – MITRE ATT&CK Related Events in Splunk
+
+## Result
+
+The observed events successfully map to multiple MITRE ATT&CK techniques commonly associated with ransomware. This demonstrates how defenders can use Sysmon and Splunk to identify attacker behavior and perform threat hunting based on MITRE ATT&CK.
