@@ -498,12 +498,6 @@ or
 ```spl
 index=main (EventCode=1 OR EventCode=11)
 ```
-
-## Evidence
-
-- Screenshot 16 – Incident Timeline Search
-- Screenshot 17 – Timeline Events in Splunk
-
 ## Result
 
 The collected Sysmon events clearly show the sequence of activities performed during the ransomware simulation. The timeline demonstrates how security analysts can reconstruct attacker behavior from process creation and file creation events.
@@ -528,9 +522,6 @@ Map the observed ransomware simulation activities to the MITRE ATT&CK Framework.
 Although no real malware or encryption was executed, the simulated behavior closely resembles the final stages of a ransomware attack. Microsoft Sysmon successfully captured process creation and file creation events, allowing Splunk Enterprise to detect activities commonly associated with ransomware operations.
 
 ## Evidence
-
-- Screenshot 18 – Process Creation (Event ID 1)
-- Screenshot 19 – File Creation (Event ID 11)
 - Screenshot 20 – MITRE ATT&CK Related Events in Splunk
 
 ## Result
