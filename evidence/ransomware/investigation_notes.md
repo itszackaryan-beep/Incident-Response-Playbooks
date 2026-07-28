@@ -521,9 +521,6 @@ Map the observed ransomware simulation activities to the MITRE ATT&CK Framework.
 
 Although no real malware or encryption was executed, the simulated behavior closely resembles the final stages of a ransomware attack. Microsoft Sysmon successfully captured process creation and file creation events, allowing Splunk Enterprise to detect activities commonly associated with ransomware operations.
 
-## Evidence
-- Screenshot 20 – MITRE ATT&CK Related Events in Splunk
-
 ## Result
 
 The observed events successfully map to multiple MITRE ATT&CK techniques commonly associated with ransomware. This demonstrates how defenders can use Sysmon and Splunk to identify attacker behavior and perform threat hunting based on MITRE ATT&CK.
