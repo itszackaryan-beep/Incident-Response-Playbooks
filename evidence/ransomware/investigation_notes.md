@@ -300,6 +300,7 @@ Contact: attacker@example.com
 # Evidence
 
 ## Screenshot 10 – Simulated Ransom Note
+![Screenshot 10](screenshots/10_Simulated_Ransom_Note(1).jpg)
 
 Shows the **Ransomware_Test** folder containing **README_RESTORE_FILES.txt**. The ransom note is opened in Notepad displaying the simulated ransom message.
 
@@ -312,7 +313,7 @@ Shows the **Ransomware_Test** folder containing **README_RESTORE_FILES.txt**. Th
 ---
 
 ## Screenshot 11 – Ransom Note Detection in Splunk
-
+![Screenshot 11](screenshots/11_Ransom_Note_Detection_in_Splunk.jpg)
 Displays the **Sysmon File Create (Event ID 11)** event in Splunk Enterprise confirming that the ransom note creation was successfully detected.
 
 The event shows:
@@ -331,6 +332,8 @@ The event shows:
 ---
 
 ## Screenshot 12 – Event Details Verification
+
+![Screenshot 12](screenshots/11_Ransom_Note_Detection_in_Splunk_Details.jpg)
 
 Shows the detailed Sysmon event collected by Splunk Enterprise.
 
