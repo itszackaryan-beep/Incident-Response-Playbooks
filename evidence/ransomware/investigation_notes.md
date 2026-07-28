@@ -398,3 +398,70 @@ This confirms that the monitoring environment is capable of detecting ransomware
 ## Status
 
 **✅ Completed**
+# Step 6 – IOC Extraction
+
+## Objective
+
+Extract Indicators of Compromise (IOCs) generated during the ransomware simulation using Microsoft Sysmon logs collected in Splunk Enterprise.
+
+---
+
+## IOC Investigation
+
+The Sysmon logs generated during the simulation were analyzed to identify indicators commonly used during incident response investigations.
+
+The following information was extracted from the generated events.
+
+| Indicator | Value |
+|-----------|-------|
+| Host Name | WIN-CIH5CI81EMR |
+| User | Administrator |
+| Process Name | notepad.exe |
+| Parent Process | explorer.exe |
+| File Name | README_RESTORE_FILES.txt |
+| File Path | C:\Users\Administrator\Desktop\Ransomware_Test\README_RESTORE_FILES.txt |
+| Event ID | 1 (Process Create), 11 (File Create) |
+| Timestamp | 2026-07-28 07:29 UTC |
+
+---
+
+## SPL Query
+
+```spl
+index=main README_RESTORE_FILES
+```
+
+Alternative
+
+```spl
+index=main (EventCode=1 OR EventCode=11)
+| table _time host User Image TargetFilename EventCode
+```
+
+---
+
+## Observations
+
+- Process Create (Event ID 1) recorded execution of Notepad.
+- File Create (Event ID 11) detected creation of README_RESTORE_FILES.txt.
+- Host, user, timestamp, process, and file path were successfully extracted.
+- These indicators can be used during threat hunting and incident response investigations.
+
+---
+
+## Evidence
+
+- Screenshot 12 – IOC Extraction Search Query
+- Screenshot 13 – Process Create Event Details
+- Screenshot 14 – File Create Event Details
+- Screenshot 15 – IOC Information Fields
+- Screenshot 16 – IOC Table View
+- Screenshot 17 – README_RESTORE_FILES Search Result
+
+---
+
+## Result
+
+The generated Sysmon events successfully provided valuable Indicators of Compromise (IOCs), including process execution details, file creation activity, user information, host name, timestamps, and file paths. These artifacts can assist security analysts in identifying ransomware behavior and performing incident investigations.
+
+**Status:** ✅ Completed
