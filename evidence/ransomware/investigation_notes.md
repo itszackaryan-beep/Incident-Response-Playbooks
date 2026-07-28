@@ -221,20 +221,6 @@ index=main (EventCode=11 OR EventCode=23 OR EventCode=26)
 The simulated file activity was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of detecting suspicious file operations commonly associated with ransomware behavior.
 
 **Status:** ✅ Completed
-## Step 5 – Simulated Ransom Note Creation
-
-### Objective
-Simulate the final stage of a ransomware attack by creating a ransom note and verify that Microsoft Sysmon detects the file creation activity in Splunk Enterprise.
-
-### Background
-Most ransomware families create a ransom note after encrypting files. The note usually contains payment instructions and informs the victim that their files have been encrypted. In this lab, a **safe simulation** is performed without using any real ransomware or encryption.
-
-### Tasks Performed
-- Created a simulated ransom note named **README_RESTORE_FILES.txt** inside the **Ransomware_Test** folder.
-- Added a sample ransom message to imitate real ransomware behavior.
-- Verified that Microsoft Sysmon generated a **File Create (Event ID 11)** event.
-- Confirmed that Splunk Enterprise successfully collected and indexed the generated event.
-
 ### Sample Ransom Note
 
 ```text
@@ -248,30 +234,163 @@ No files were actually encrypted or damaged.
 
 Contact: attacker@example.com
 ```
+# Step 5 – Simulated Ransom Note Creation
 
-### Observations
+## Objective
+
+Simulate the final stage of a ransomware attack by creating a ransom note and verify that Microsoft Sysmon detects the file creation activity in Splunk Enterprise.
+
+---
+
+## Background
+
+Many ransomware families create a ransom note after encrypting files. The ransom note usually informs the victim that their files have been encrypted and provides payment instructions.
+
+In this lab, a **safe ransomware simulation** was performed. **No real ransomware was executed and no files were encrypted or damaged.** The objective was to generate ransomware-like artifacts and verify that Microsoft Sysmon and Splunk Enterprise successfully detected them.
+
+---
+
+## Tasks Performed
+
+- Created a folder named **Ransomware_Test** on the Windows Server 2022 Desktop.
+- Created a simulated ransom note named **README_RESTORE_FILES.txt** inside the folder.
+- Added a sample ransom message to imitate real ransomware behavior.
+- Verified that Microsoft Sysmon generated a **File Create (Event ID 11)** event.
+- Confirmed that Splunk Enterprise successfully indexed the generated event.
+- Verified the captured event details:
+  - Target Filename
+  - File Name
+  - Process Name
+  - File Create Action
+  - User Account
+  - Timestamp
+
+---
+
+## Sample Ransom Note
+
+```text
+==============================
+YOUR FILES HAVE BEEN ENCRYPTED
+==============================
+
+This is a safe ransomware simulation created for cybersecurity lab testing.
+
+No files were actually encrypted or damaged.
+
+Contact: attacker@example.com
+```
+
+---
+
+## Observations
+
 - The simulated ransom note was successfully created.
-- Microsoft Sysmon detected the file creation event.
+- Microsoft Sysmon detected the **File Create (Event ID 11)** event.
 - Splunk Enterprise successfully indexed the generated event.
-- The activity demonstrates how defenders can detect ransomware indicators before performing incident response.
+- Event details confirmed:
+  - File Name: **README_RESTORE_FILES.txt**
+  - Process Name: **cmd.exe**
+  - Action: **created**
+  - Signature: **FileCreate**
+- This demonstrates how defenders can identify ransomware indicators during security monitoring and incident response.
 
-### Evidence
-- **Screenshot 10 – Simulated Ransom Note**
-- **Screenshot 11 – Ransom Note Detection in Splunk**
+---
 
-### SPL Query
+# Evidence
+
+## Screenshot 10 – Simulated Ransom Note
+
+Shows the **Ransomware_Test** folder containing **README_RESTORE_FILES.txt**. The ransom note is opened in Notepad displaying the simulated ransom message.
+
+**Filename**
+
+```
+10_Simulated_Ransom_Note.jpg
+```
+
+---
+
+## Screenshot 11 – Ransom Note Detection in Splunk
+
+Displays the **Sysmon File Create (Event ID 11)** event in Splunk Enterprise confirming that the ransom note creation was successfully detected.
+
+The event shows:
+
+- Event ID: 11
+- File Create Event
+- Target Filename
+- README_RESTORE_FILES.txt
+
+**Filename**
+
+```
+11_Ransom_Note_Detection_in_Splunk.jpg
+```
+
+---
+
+## Screenshot 12 – Event Details Verification
+
+Shows the detailed Sysmon event collected by Splunk Enterprise.
+
+The investigation confirms the following forensic information:
+
+- TargetFilename
+- README_RESTORE_FILES.txt
+- File Name
+- Process Name (cmd.exe)
+- FileCreate Signature
+- Action: created
+- User Account
+- Timestamp
+
+This provides detailed evidence that the ransom note creation was successfully monitored by Microsoft Sysmon.
+
+**Filename**
+
+```
+12_Ransom_Note_Event_Details.jpg
+```
+
+---
+
+# SPL Query Used
 
 ```spl
 index=main EventCode=11 README_RESTORE_FILES
 ```
 
-**Alternative Query**
+### Alternative Query
 
 ```spl
 index=main EventCode=11
 ```
 
-### Result
-The simulated ransom note was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. This confirms that the monitoring environment is capable of identifying ransomware indicators such as ransom note creation and supporting incident response investigations.
+---
 
-**Status:** ✅ Completed
+# Detection Summary
+
+| Field | Value |
+|-------|-------|
+| Event ID | 11 |
+| Detection | File Create |
+| File Name | README_RESTORE_FILES.txt |
+| Process | cmd.exe |
+| Action | created |
+| Source | Microsoft Sysmon |
+| SIEM | Splunk Enterprise |
+
+---
+
+# Result
+
+The simulated ransom note was successfully detected by Microsoft Sysmon and indexed in Splunk Enterprise. The event captured important forensic information including the file name, target path, process name, timestamp, and user account.
+
+This confirms that the monitoring environment is capable of detecting ransomware indicators such as ransom note creation and provides valuable evidence for incident response and threat investigation.
+
+---
+
+## Status
+
+**✅ Completed**
