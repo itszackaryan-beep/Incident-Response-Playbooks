@@ -451,6 +451,8 @@ index=main (EventCode=1 OR EventCode=11)
 
 ## Evidence
 
+### Screenshot All - IOC Extraction
+
 - Screenshot 12 – IOC Extraction Search Query
 - Screenshot 13 – Process Create Event Details
 - Screenshot 14 – File Create Event Details
