@@ -253,3 +253,125 @@ The simulated confidential company data was successfully created and prepared fo
 
 ✅ Completed
 
+# Step 2 – Data Collection (Data Staging)
+
+## Objective
+
+Simulate the collection of sensitive company files into a temporary staging folder and verify that Microsoft Sysmon records the associated file activity.
+
+---
+
+## Background
+
+Before exfiltrating data, attackers commonly collect important files into a temporary location. This process is known as **Data Staging**.
+
+By staging files in one directory, attackers can easily compress, archive, or prepare them for transfer.
+
+In this lab, a safe simulation is performed by copying dummy confidential files into a temporary folder. No files leave the Windows Server and no actual data exfiltration occurs.
+
+---
+
+## Tasks Performed
+
+- Created a temporary folder named **Collected_Data**.
+- Copied all simulated confidential files from **Company_Data**.
+- Stored the copied files inside the Collected_Data folder.
+- Verified that Microsoft Sysmon generated File Create events.
+- Confirmed that Splunk Enterprise successfully collected the generated logs.
+
+---
+
+## Source Folder
+
+```text
+C:\Company_Data
+```
+
+## Destination Folder
+
+```text
+C:\Temp\Collected_Data
+```
+
+---
+
+## Files Copied
+
+```text
+Employee_Salary.xlsx
+Employee_Details.xlsx
+Customer_Database.csv
+Financial_Report_2026.xlsx
+HR_Records.docx
+Confidential_Project.pdf
+```
+
+---
+
+## Observations
+
+- The Collected_Data folder was created successfully.
+- All dummy confidential files were copied successfully.
+- Microsoft Sysmon generated File Create (Event ID 11) events.
+- Splunk Enterprise successfully indexed the generated file activity.
+- The activity simulates the data staging phase commonly observed before data exfiltration.
+
+---
+
+# Evidence
+
+## Screenshot 05 – Data Collection Folder
+
+**Filename**
+
+```text
+05_Data_Collection_Folder.jpg
+```
+
+**Description**
+
+Shows the Collected_Data folder containing the copied confidential files.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 06 – File Activity Detection in Splunk
+
+**Filename**
+
+```text
+06_File_Activity_Detection_Splunk.jpg
+```
+
+**Description**
+
+Shows Microsoft Sysmon File Create (Event ID 11) events generated during the file copy operation.
+
+> 📸 Place Screenshot Here
+
+---
+
+## SPL Query
+
+```spl
+index=soc_lab EventCode=11
+```
+
+Alternative
+
+```spl
+index=main EventCode=11
+```
+
+---
+
+## Result
+
+The confidential files were successfully collected into a temporary staging folder. Microsoft Sysmon detected the file creation activity, and Splunk Enterprise successfully indexed the generated events. This demonstrates how defenders can identify data staging activity before a potential data exfiltration attempt.
+
+---
+
+## Status
+
+✅ Completed
