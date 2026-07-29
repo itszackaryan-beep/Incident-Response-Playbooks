@@ -639,3 +639,117 @@ Authentication-related Indicators of Compromise (IOCs) were successfully extract
 ## Status
 
 ✅ Completed
+# Step 5 – Incident Timeline Analysis
+
+## Objective
+
+Create a chronological timeline of the simulated brute force attack using Windows Security Event Logs collected in Splunk Enterprise.
+
+---
+
+## Background
+
+An incident timeline helps security analysts understand the sequence of events during an attack. By arranging authentication events in chronological order, investigators can identify when failed login attempts occurred, when a successful login happened, and how the incident progressed.
+
+This timeline provides valuable context for incident response and forensic analysis.
+
+---
+
+## Lab Components
+
+| Component | Description |
+|-----------|-------------|
+| SIEM | Splunk Enterprise |
+| Log Source | Windows Security Event Logs |
+| Event IDs | 4625 (Failed Logon), 4624 (Successful Logon) |
+| Investigation | Incident Timeline |
+
+---
+
+## Tasks Performed
+
+- Reviewed failed authentication events (Event ID 4625).
+- Reviewed successful authentication events (Event ID 4624).
+- Sorted authentication events by timestamp.
+- Built a chronological incident timeline.
+- Verified the complete authentication sequence.
+
+---
+
+## Incident Timeline
+
+| Time | Activity | Event ID |
+|------|----------|----------|
+| HH:MM | Failed Login Attempt #1 | 4625 |
+| HH:MM | Failed Login Attempt #2 | 4625 |
+| HH:MM | Failed Login Attempt #3 | 4625 |
+| HH:MM | Failed Login Attempt #4 | 4625 |
+| HH:MM | Failed Login Attempt #5 | 4625 |
+| HH:MM | Successful Login | 4624 |
+| HH:MM | Splunk Investigation Started | N/A |
+
+> **Note:** Replace **HH:MM** with the actual timestamps collected from your Splunk logs.
+
+---
+
+# Evidence
+
+## Screenshot 16 – Authentication Timeline Query
+
+**Filename**
+
+```text
+16_Authentication_Timeline_Query.jpg
+```
+
+**Description**
+
+Splunk search query displaying failed and successful authentication events in chronological order.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 17 – Incident Timeline Results
+
+**Filename**
+
+```text
+17_Incident_Timeline_Results.jpg
+```
+
+**Description**
+
+Splunk Enterprise displaying the authentication timeline used during the brute force investigation.
+
+> 📸 Place Screenshot Here
+
+---
+
+# SPL Query
+
+```spl
+index=main (EventCode=4624 OR EventCode=4625)
+| sort _time
+| table _time Account_Name EventCode host
+```
+
+If using another index:
+
+```spl
+index=soc_lab (EventCode=4624 OR EventCode=4625)
+| sort _time
+| table _time Account_Name EventCode host
+```
+
+---
+
+## Result
+
+The incident timeline successfully reconstructed the authentication sequence by arranging failed and successful login events in chronological order. The timeline clearly demonstrated repeated failed login attempts followed by a successful authentication, providing valuable context for the brute force investigation.
+
+---
+
+## Status
+
+✅ Completed
