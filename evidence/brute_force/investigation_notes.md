@@ -57,6 +57,7 @@ This step validates the lab environment and confirms that Remote Desktop Protoco
 ## Screenshot 00 – Kali Linux Connectivity Verification
 
 **Filename**
+![Screenshot 00](screenshots/00_Kali_RDP_Connectivity.jpg)
 
 ```text
 00_Kali_RDP_Connectivity.jpg
@@ -71,7 +72,7 @@ Kali Linux successfully communicating with Windows Server 2022 using network con
 ## Screenshot 01 – Remote Desktop Enabled
 
 **Filename**
-
+![Screenshot 00](screenshots/01_Remote_Desktop_Enabled.jpg)
 ```text
 01_Remote_Desktop_Enabled.jpg
 ```
