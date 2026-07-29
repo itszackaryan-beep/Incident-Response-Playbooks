@@ -575,3 +575,234 @@ The simulated investigation successfully demonstrated how Microsoft Sysmon and S
 ## Status
 
 ✅ Completed
+
+# Step 5 – IOC Extraction
+
+## Objective
+
+Extract Indicators of Compromise (IOCs) from the Microsoft Sysmon events collected by Splunk Enterprise during the simulated data staging investigation.
+
+---
+
+## Background
+
+Indicators of Compromise (IOCs) are forensic artifacts that help security analysts identify suspicious activities and reconstruct attacker behavior.
+
+During this investigation, Sysmon logs are analyzed to extract key information related to the simulated data staging activity.
+
+---
+
+## Tasks Performed
+
+- Extracted Host Name.
+- Identified the User Account.
+- Recorded Process Name.
+- Identified Target File Names.
+- Collected Event IDs.
+- Recorded Event Timestamp.
+- Reviewed the generated IOC table.
+
+---
+
+## IOC Information
+
+| IOC | Value |
+|------|-------|
+| Host Name | Windows Server Host |
+| User | Administrator |
+| Process Name | explorer.exe |
+| Event ID | 1, 11 |
+| Target File | Collected_Data.zip |
+| Timestamp | Splunk Event Time |
+
+---
+
+# Evidence
+
+## Screenshot 12 – IOC Extraction Query
+
+Filename
+
+```text
+12_IOC_Extraction_Query.jpg
+```
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 13 – IOC Table
+
+Filename
+
+```text
+13_IOC_Table.jpg
+```
+
+> 📸 Place Screenshot Here
+
+---
+
+## SPL Query
+
+```spl
+index=soc_lab (EventCode=1 OR EventCode=11)
+| table _time host User Image TargetFilename EventCode
+```
+
+---
+
+## Result
+
+The Indicators of Compromise were successfully extracted from Microsoft Sysmon logs and verified using Splunk Enterprise.
+
+---
+
+## Status
+
+✅ Completed
+# Step 6 – Incident Timeline & MITRE ATT&CK Mapping
+
+## Objective
+
+Create a timeline of the simulated attacker activity and map the observed behavior to the MITRE ATT&CK framework.
+
+---
+
+## Incident Timeline
+
+| Time | Activity |
+|------|----------|
+| HH:MM | Company_Data folder created |
+| HH:MM | Sensitive files created |
+| HH:MM | Files copied to Collected_Data |
+| HH:MM | ZIP archive created |
+| HH:MM | Sysmon detected activity |
+| HH:MM | Splunk investigation performed |
+
+Replace **HH:MM** with the actual timestamps from your Splunk logs.
+
+---
+
+## MITRE ATT&CK Mapping
+
+| Activity | Technique ID | Technique |
+|----------|--------------|-----------|
+| Local Data Collection | T1005 | Data from Local System |
+| Data Staging | T1074 | Data Staged |
+| Archive Collected Data | T1560.001 | Archive via Utility |
+
+---
+
+# Evidence
+
+## Screenshot 14 – Incident Timeline
+
+Filename
+
+```text
+14_Incident_Timeline.jpg
+```
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 15 – MITRE ATT&CK Mapping
+
+Filename
+
+```text
+15_MITRE_ATTACK_Mapping.jpg
+```
+
+> 📸 Place Screenshot Here
+
+---
+
+## Result
+
+The observed activities were successfully reconstructed into a chronological timeline and mapped to the MITRE ATT&CK framework.
+
+---
+
+## Status
+
+✅ Completed
+# Step 7 – Incident Response Summary
+
+## Objective
+
+Summarize the incident using the NIST Incident Response Lifecycle.
+
+---
+
+## Detection
+
+Microsoft Sysmon detected process execution and file creation activities associated with the simulated data staging operation. Splunk Enterprise successfully collected and indexed the generated events.
+
+---
+
+## Analysis
+
+The investigation confirmed that multiple confidential files were collected into a temporary staging folder and compressed into a ZIP archive. No external transfer of data occurred during the simulation.
+
+---
+
+## Containment
+
+- Review the affected endpoint.
+- Monitor suspicious file collection activities.
+- Restrict unauthorized access to confidential directories.
+- Alert the SOC team for further investigation.
+
+---
+
+## Eradication
+
+- Remove unauthorized staged files.
+- Delete unnecessary archive files.
+- Verify endpoint integrity.
+- Review user permissions.
+
+---
+
+## Recovery
+
+- Restore normal access to business data.
+- Continue monitoring Sysmon events.
+- Validate endpoint security controls.
+
+---
+
+## Lessons Learned
+
+- Microsoft Sysmon provides valuable endpoint visibility.
+- Splunk Enterprise enables effective investigation of suspicious file activities.
+- Monitoring file staging and archive creation can help identify potential data exfiltration attempts before data leaves the organization.
+
+---
+
+# Evidence
+
+## Screenshot 16 – Incident Response Summary
+
+Filename
+
+```text
+16_Incident_Response_Summary.jpg
+```
+
+> 📸 Place Screenshot Here
+
+---
+
+## Conclusion
+
+The simulated Data Exfiltration Detection project successfully demonstrated how Microsoft Sysmon and Splunk Enterprise can detect, investigate, and analyze suspicious file collection and archive creation activities in a controlled cybersecurity lab environment. Although no actual data exfiltration occurred, the generated logs provided realistic evidence for incident investigation and SOC analyst training.
+
+---
+
+## Status
+
+✅ Project Completed
