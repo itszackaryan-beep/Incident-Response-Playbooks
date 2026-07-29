@@ -2,13 +2,13 @@
 Microsoft Sysmon Process Creation Log
 ==========================================
 
-Timestamp:
+Timestamp:  2026-07-29 11:47:37 AM
 _________________________
 
-Host Name:
+Host Name:  WIN-CIH5CI81EMR
 _________________________
 
-User:
+User:  Administrator
 _________________________
 
 Event ID:
