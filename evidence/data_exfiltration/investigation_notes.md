@@ -153,3 +153,103 @@ The lab environment was successfully configured for the Data Exfiltration Detect
 
 ✅ Completed
 
+# Step 1 – Sensitive Company Data Creation
+
+## Objective
+
+Create a set of simulated confidential company files that will be used during the Data Exfiltration Detection investigation.
+
+---
+
+## Background
+
+One of the earliest stages of a data exfiltration attack involves identifying and collecting valuable organizational data such as employee records, financial reports, customer databases, and confidential documents.
+
+In this lab, a safe simulation is performed by creating dummy files that represent sensitive company information. No real confidential data is used.
+
+---
+
+## Tasks Performed
+
+- Created a folder named **Company_Data**.
+- Generated multiple dummy confidential files.
+- Stored all files inside the Company_Data folder.
+- Verified the files were successfully created.
+- Prepared the environment for the next stage of the investigation.
+
+---
+
+# Folder Location
+
+```text
+C:\Company_Data
+```
+
+---
+
+# Sample Files Created
+
+```text
+Employee_Salary.xlsx
+Employee_Details.xlsx
+Customer_Database.csv
+Financial_Report_2026.xlsx
+HR_Records.docx
+Confidential_Project.pdf
+```
+
+---
+
+## Observations
+
+- The Company_Data folder was created successfully.
+- Six dummy confidential files were generated.
+- The files simulate sensitive organizational information.
+- These files will be used during the simulated data collection phase.
+
+---
+
+# Evidence
+
+## Screenshot 03 – Company Data Folder
+
+**Filename**
+
+```text
+03_Company_Data_Folder.jpg
+```
+
+**Description**
+
+Shows the Company_Data folder created successfully on Windows Server.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 04 – Confidential Files
+
+**Filename**
+
+```text
+04_Confidential_Files.jpg
+```
+
+**Description**
+
+Displays all simulated confidential company files inside the Company_Data folder.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Result
+
+The simulated confidential company data was successfully created and prepared for the Data Exfiltration Detection investigation.
+
+---
+
+## Status
+
+✅ Completed
+
