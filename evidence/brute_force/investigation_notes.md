@@ -680,15 +680,14 @@ This timeline provides valuable context for incident response and forensic analy
 
 | Time | Activity | Event ID |
 |------|----------|----------|
-| HH:MM | Failed Login Attempt #1 | 4625 |
-| HH:MM | Failed Login Attempt #2 | 4625 |
-| HH:MM | Failed Login Attempt #3 | 4625 |
-| HH:MM | Failed Login Attempt #4 | 4625 |
-| HH:MM | Failed Login Attempt #5 | 4625 |
-| HH:MM | Successful Login | 4624 |
-| HH:MM | Splunk Investigation Started | N/A |
+| 05:11 | Failed Login Attempt #2 | 4625 |
+| 05:16 | Failed Login Attempt #3 | 4625 |
+| 05:16 | Failed Login Attempt #4 | 4625 |
+| 05:19 | Failed Login Attempt #5 | 4625 |
+| 05:20 | Successful Login | 4624 |
+| 05:18 | Splunk Investigation Started | Y |
 
-> **Note:** Replace **HH:MM** with the actual timestamps collected from your Splunk logs.
+
 
 ---
 
