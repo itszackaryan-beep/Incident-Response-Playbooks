@@ -435,7 +435,7 @@ C:\Temp\Collected_Data\Collected_Data.zip
 Shows the Collected_Data.zip archive successfully created inside the Collected_Data folder.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 06](screenshots/06_ZIP_Archive_Created.jpg.jpg)
 ---
 
 ## Screenshot 07 – ZIP File Detection in Splunk
@@ -451,7 +451,7 @@ Shows the Collected_Data.zip archive successfully created inside the Collected_D
 Shows Microsoft Sysmon Event ID 11 related to the ZIP archive creation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 06](screenshots/07_ZIP_File_Detection_Splunk.jpg.jpg)
 ---
 
 ## SPL Query
