@@ -628,7 +628,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-![Screenshot 12](screenshots/13_IOC_Table.jpg.jpg)
+![Screenshot 12](screenshots/12_IOC_Extraction_Query.jpg.jpg)
 ---
 
 ## Screenshot 13 – IOC Table
