@@ -628,7 +628,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-
+![Screenshot 12](screenshots/13_IOC_Table.jpg.jpg)
 ---
 
 ## Screenshot 13 – IOC Table
@@ -640,7 +640,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-
+![Screenshot 13](screenshots/13_IOC_Table.jpg.jpg)
 ---
 
 ## SPL Query
@@ -673,12 +673,12 @@ Create a timeline of the simulated attacker activity and map the observed behavi
 
 | Time | Activity |
 |------|----------|
-| HH:MM | Company_Data folder created |
-| HH:MM | Sensitive files created |
-| HH:MM | Files copied to Collected_Data |
-| HH:MM | ZIP archive created |
-| HH:MM | Sysmon detected activity |
-| HH:MM | Splunk investigation performed |
+| 05:10| Company_Data folder created |
+| 05:12 | Sensitive files created |
+| 05:15 | Files copied to Collected_Data |
+| 05:18 | ZIP archive created |
+| 05:19 | Sysmon detected activity |
+| 05:21 | Splunk investigation performed |
 
 Replace **HH:MM** with the actual timestamps from your Splunk logs.
 
@@ -705,7 +705,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-
+![Screenshot 14](screenshots/14_Incident_Timeline.jpg.jpg)
 ---
 
 ## Screenshot 15 – MITRE ATT&CK Mapping
@@ -717,7 +717,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-
+![Screenshot 15](screenshots/15_MITRE_ATTACK_Mapping.jpg.jpg)
 ---
 
 ## Result
@@ -794,7 +794,7 @@ Filename
 ```
 
 > 📸 Place Screenshot Here
-
+![Screenshot 16](screenshots/16_Incident_Response_Summary.jpg.jpg)
 ---
 
 ## Conclusion
