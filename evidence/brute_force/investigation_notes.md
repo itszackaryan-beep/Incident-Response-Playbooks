@@ -72,7 +72,7 @@ Kali Linux successfully communicating with Windows Server 2022 using network con
 ## Screenshot 01 – Remote Desktop Enabled
 
 **Filename**
-![Screenshot 00](screenshots/01_Remote_Desktop_Enabled.jpg)
+![Screenshot 01](screenshots/01_Remote_Desktop_Enabled.jpg)
 ```text
 01_Remote_Desktop_Enabled.jpg
 ```
@@ -84,7 +84,7 @@ Windows Server 2022 showing Remote Desktop enabled for incoming RDP connections.
 ---
 
 ## Screenshot 02 – RDP Service Listening
-
+![Screenshot 02](screenshots/02_RDP_Port_3389_LISTENING.jpg.jpg)
 **Filename**
 
 ```text
@@ -176,7 +176,7 @@ In this lab, a **safe simulation** is performed by intentionally entering incorr
 ## Screenshot 03 – RDP Login Attempt from Kali Linux
 
 **Filename**
-
+![Screenshot 03](screenshots/03_RDP_Login_Attempt_From_Kali.jpg.jpg)
 ```text
 03_RDP_Login_Attempt_From_Kali.jpg
 ```
@@ -190,7 +190,7 @@ Kali Linux initiating a Remote Desktop connection to Windows Server 2022 for aut
 ## Screenshot 04 – Failed Login Message
 
 **Filename**
-
+![Screenshot 04](screenshots/04_Failed_Login_Message.jpg.jpg)
 ```text
 04_Failed_Login_Message.jpg
 ```
@@ -202,7 +202,7 @@ Windows Server displaying an authentication failure after an incorrect password 
 ---
 
 ## Screenshot 05 – Event ID 4625 in Event Viewer
-
+![Screenshot 05](screenshots/05_EventID4625_EventViewer.jpg.jpg)
 **Filename**
 
 ```text
@@ -216,7 +216,7 @@ Windows Security Event Viewer displaying Event ID 4625 generated during the fail
 ---
 
 ## Screenshot 06 – Event ID 4625 in Splunk
-
+![Screenshot 06](screenshots/06_EventID4625_in_Splunk.jpg.jpg)
 **Filename**
 
 ```text
@@ -314,7 +314,7 @@ This step demonstrates that Splunk Enterprise can monitor both failed and succes
 Windows Server 2022 desktop displayed after a successful Administrator login.
 
 > 📸 **Place Screenshot Here**
-
+![Screenshot 07](screenshots/07_Successful_Login_On_Windows_Server.jpg.jpg)
 ---
 
 ## Screenshot 08 – Event ID 4624 in Event Viewer
@@ -330,7 +330,7 @@ Windows Server 2022 desktop displayed after a successful Administrator login.
 Windows Security Event Viewer displaying **Event ID 4624 (Successful Logon)** generated after successful authentication.
 
 > 📸 **Place Screenshot Here**
-
+![Screenshot 08](screenshots/08_EventID4624_EventViewer.jpg.jpg)
 ---
 
 ## Screenshot 09 – Event ID 4624 in Splunk
@@ -346,7 +346,7 @@ Windows Security Event Viewer displaying **Event ID 4624 (Successful Logon)** ge
 Splunk Enterprise displaying Windows Security **Event ID 4624** collected from Windows Server 2022.
 
 > 📸 **Place Screenshot Here**
-
+![Screenshot 09](screenshots/09_EventID4624_in_Splunk.jpg.jpg)
 ---
 
 # SPL Query
@@ -437,7 +437,7 @@ By analyzing these logs in Splunk Enterprise, security analysts can identify sus
 Splunk Enterprise displaying multiple Windows Security Event ID 4625 events generated during the failed login simulation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 10](screenshots/10_Multiple_Failed_Login_Events.jpg.jpg)
 ---
 
 ## Screenshot 11 – Failed Login Statistics
@@ -453,7 +453,7 @@ Splunk Enterprise displaying multiple Windows Security Event ID 4625 events gene
 Splunk statistics showing the number of failed login attempts for each user account.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 11](screenshots/11_Failed_Login_Statistics.jpg.jpg)
 ---
 
 ## Screenshot 12 – Authentication Timeline
@@ -469,7 +469,7 @@ Splunk statistics showing the number of failed login attempts for each user acco
 Splunk displaying authentication events in chronological order for investigation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 12](screenshots/12_Authentication_Timeline.jpg.jpg)
 ---
 
 # SPL Queries
@@ -574,7 +574,7 @@ This step demonstrates how Splunk Enterprise can be used to extract and analyze 
 Splunk search query used to extract authentication-related Indicators of Compromise (IOCs).
 
 > 📸 Place Screenshot Here
-
+![Screenshot 13](screenshots/13_IOC_Extraction_Query.jpg.jpg)
 ---
 
 ## Screenshot 14 – IOC Information Table
@@ -590,7 +590,7 @@ Splunk search query used to extract authentication-related Indicators of Comprom
 Splunk table displaying extracted IOC information including host, username, event ID, logon type, source IP address, and timestamp.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 14](screenshots/14_IOC_Information_Table.jpg.jpg)
 ---
 
 ## Screenshot 15 – Authentication Event Details
@@ -606,7 +606,7 @@ Splunk table displaying extracted IOC information including host, username, even
 Detailed view of a Windows Security authentication event showing important IOC fields collected during the investigation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 15](screenshots/15_Authentication_Event_Details.jpg.jpg)
 ---
 
 # SPL Queries
@@ -707,7 +707,7 @@ This timeline provides valuable context for incident response and forensic analy
 Splunk search query displaying failed and successful authentication events in chronological order.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 16](screenshots/16_Authentication_Timeline_Query.jpg.jpg)
 ---
 
 ## Screenshot 17 – Incident Timeline Results
@@ -723,7 +723,7 @@ Splunk search query displaying failed and successful authentication events in ch
 Splunk Enterprise displaying the authentication timeline used during the brute force investigation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 17](screenshots/17_Incident_Timeline_Results.jpg.jpg)
 ---
 
 # SPL Query
@@ -817,7 +817,7 @@ During this lab, repeated failed authentication attempts followed by a successfu
 Documentation showing how the observed Windows authentication events were mapped to the MITRE ATT&CK framework.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 18](screenshots/18_MITRE_ATTACK_Mapping.jpg.jpg)
 ---
 
 ## Screenshot 19 – Authentication Events Supporting MITRE Mapping
@@ -833,7 +833,7 @@ Documentation showing how the observed Windows authentication events were mapped
 Splunk Enterprise displaying authentication events that support the MITRE ATT&CK mapping.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 19](screenshots/19_Authentication_Events_For_MITRE.jpg.jpg)
 ---
 
 # Supporting SPL Query
@@ -958,7 +958,7 @@ This investigation demonstrated that:
 Final investigation summary documenting the Detection, Analysis, Containment, Eradication, Recovery, and Lessons Learned phases based on the NIST Incident Response Lifecycle.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 20](screenshots/20_Incident_Response_Summary.jpg.jpg)
 ---
 
 ## Project Conclusion
