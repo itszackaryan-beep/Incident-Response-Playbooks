@@ -477,3 +477,174 @@ The ZIP archive was successfully created and Microsoft Sysmon recorded the assoc
 ## Status
 
 ✅ Completed
+# Step 4 – Splunk Investigation
+
+## Objective
+
+Investigate the simulated data staging and archive creation activities using Microsoft Sysmon logs collected by Splunk Enterprise.
+
+---
+
+## Background
+
+Security analysts continuously monitor endpoint activity to identify suspicious file operations and process execution that may indicate data exfiltration.
+
+During this investigation, Microsoft Sysmon logs are analyzed to identify the process responsible for creating files and archives before a potential data transfer.
+
+---
+
+## Tasks Performed
+
+- Investigated Process Creation (Event ID 1).
+- Investigated File Create (Event ID 11).
+- Reviewed process names associated with file activity.
+- Verified ZIP archive creation.
+- Identified user account responsible for the activity.
+- Verified all events were indexed by Splunk Enterprise.
+
+---
+
+# Splunk Queries
+
+## Process Creation
+
+```spl
+index=soc_lab EventCode=1
+```
+
+Alternative
+
+```spl
+index=main EventCode=1
+```
+
+---
+
+## File Create
+
+```spl
+index=soc_lab EventCode=11
+```
+
+Alternative
+
+```spl
+index=main EventCode=11
+```
+
+---
+
+## Process and File Activity
+
+```spl
+index=soc_lab (EventCode=1 OR EventCode=11)
+| table _time Image TargetFilename User EventCode
+```
+
+---
+
+## ZIP Archive Search
+
+```spl
+index=soc_lab Collected_Data.zip
+```
+
+Alternative
+
+```spl
+index=soc_lab TargetFilename="*Collected_Data.zip*"
+```
+
+---
+
+## Observations
+
+- Microsoft Sysmon successfully detected process execution.
+- File creation events were successfully generated.
+- ZIP archive creation activity was recorded.
+- Splunk Enterprise indexed all relevant Sysmon events.
+- The investigation successfully reconstructed the simulated data staging activity.
+
+---
+
+# Evidence
+
+## Screenshot 08 – Process Creation Investigation
+
+Filename
+
+```text
+08_Process_Creation_Search.jpg
+```
+
+Description
+
+Shows Sysmon Process Creation (Event ID 1) events in Splunk.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 09 – File Activity Investigation
+
+Filename
+
+```text
+09_File_Create_Search.jpg
+```
+
+Description
+
+Shows Sysmon File Create (Event ID 11) events including the copied files.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 10 – ZIP Archive Detection
+
+Filename
+
+```text
+10_ZIP_Archive_Search.jpg
+```
+
+Description
+
+Shows the detection of Collected_Data.zip inside Splunk.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 11 – Event Details
+
+Filename
+
+```text
+11_Event_Details.jpg
+```
+
+Description
+
+Displays detailed Sysmon event information including:
+
+- TargetFilename
+- Image
+- User
+- Event ID
+- Timestamp
+
+> 📸 Place Screenshot Here
+
+---
+
+## Result
+
+Microsoft Sysmon successfully detected all process execution and file activity related to the simulated data staging operation. Splunk Enterprise indexed the generated events, allowing analysts to investigate the complete activity before a potential data exfiltration attempt.
+
+---
+
+## Status
+
+✅ Completed
