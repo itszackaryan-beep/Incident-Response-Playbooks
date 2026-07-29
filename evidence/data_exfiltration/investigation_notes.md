@@ -224,7 +224,7 @@ Confidential_Project.pdf
 Shows the Company_Data folder created successfully on Windows Server.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 03](screenshots/03_Company_Data_Folder.jpg.jpg)
 ---
 
 ## Screenshot 04 – Confidential Files
@@ -240,7 +240,7 @@ Shows the Company_Data folder created successfully on Windows Server.
 Displays all simulated confidential company files inside the Company_Data folder.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 04](screenshots/04_Confidential_Files.jpg.jpg)
 ---
 
 ## Result
