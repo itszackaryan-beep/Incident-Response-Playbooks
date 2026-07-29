@@ -2,10 +2,10 @@
 Simulated Ransom Note Event
 ==========================================
 
-Timestamp:
+Timestamp: 5:33:41 AM
 _________________________
 
-Host Name:
+Host Name: WIN-CIH5CI81EMR
 _________________________
 
 Event ID:
