@@ -1,0 +1,38 @@
+===========================================================
+Microsoft Sysmon - Process Create Event
+===========================================================
+
+Log Name       : Microsoft-Windows-Sysmon/Operational
+Source         : Microsoft-Windows-Sysmon
+Event ID       : 1
+Event Type     : Process Create
+
+Timestamp      : 2026-07-29 05:18:20
+Host Name      : WIN-CIH5CI81EMR
+User           : WIN-CIH5CI81EMR\Administrator
+
+Process Name   : C:\Windows\explorer.exe
+Parent Process : C:\Windows\explorer.exe
+
+Command Line   : explorer.exe
+
+Process ID     : <Process_ID>
+Parent PID     : <Parent_Process_ID>
+
+Description
+-----------
+This event was generated during the Data Exfiltration Detection lab.
+Microsoft Sysmon recorded the process responsible for file management
+operations performed while preparing data for staging.
+
+Detection Source
+----------------
+Microsoft Sysmon (Event ID 1)
+
+Collected By
+------------
+Splunk Enterprise
+
+Status
+------
+Verified
