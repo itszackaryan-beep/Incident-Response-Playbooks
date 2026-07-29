@@ -753,3 +753,111 @@ The incident timeline successfully reconstructed the authentication sequence by 
 ## Status
 
 ✅ Completed
+# Step 6 – MITRE ATT&CK Mapping
+
+## Objective
+
+Map the observed brute force authentication activity to the MITRE ATT&CK framework to classify attacker behavior using industry-standard techniques.
+
+---
+
+## Background
+
+MITRE ATT&CK is a globally recognized knowledge base of adversary tactics and techniques. Security analysts use this framework to classify attack behavior, improve threat detection, and support incident response activities.
+
+During this lab, repeated failed authentication attempts followed by a successful login were observed. These activities correspond to the Credential Access tactic within the MITRE ATT&CK framework.
+
+---
+
+## Lab Components
+
+| Component | Description |
+|-----------|-------------|
+| Framework | MITRE ATT&CK |
+| Tactic | Credential Access |
+| Technique | T1110.001 – Password Guessing |
+| Data Source | Windows Security Event Logs |
+| SIEM | Splunk Enterprise |
+
+---
+
+## Tasks Performed
+
+- Reviewed Windows Security authentication events.
+- Identified repeated failed login attempts.
+- Correlated failed and successful authentication events.
+- Mapped the observed activity to the MITRE ATT&CK framework.
+- Documented the corresponding tactic and technique.
+
+---
+
+## MITRE ATT&CK Mapping
+
+| Observed Activity | Event ID | MITRE Tactic | Technique ID | Technique |
+|------------------|---------:|--------------|--------------|-----------|
+| Multiple Failed Login Attempts | 4625 | Credential Access | T1110.001 | Password Guessing |
+| Successful Login After Failed Attempts | 4624 | Credential Access | T1110 | Brute Force (related authentication activity) |
+
+> **Note:** In this lab, the activity is a **safe authentication simulation** performed for defensive learning and log analysis.
+
+---
+
+# Evidence
+
+## Screenshot 18 – MITRE ATT&CK Mapping
+
+**Filename**
+
+```text
+18_MITRE_ATTACK_Mapping.jpg
+```
+
+**Description**
+
+Documentation showing how the observed Windows authentication events were mapped to the MITRE ATT&CK framework.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 19 – Authentication Events Supporting MITRE Mapping
+
+**Filename**
+
+```text
+19_Authentication_Events_For_MITRE.jpg
+```
+
+**Description**
+
+Splunk Enterprise displaying authentication events that support the MITRE ATT&CK mapping.
+
+> 📸 Place Screenshot Here
+
+---
+
+# Supporting SPL Query
+
+```spl
+index=main (EventCode=4624 OR EventCode=4625)
+| table _time Account_Name EventCode host
+```
+
+If using another index:
+
+```spl
+index=soc_lab (EventCode=4624 OR EventCode=4625)
+| table _time Account_Name EventCode host
+```
+
+---
+
+## Result
+
+The authentication events were successfully mapped to the MITRE ATT&CK framework. The repeated failed login attempts aligned with the Credential Access tactic and Password Guessing (T1110.001) technique, demonstrating how Windows Security logs and Splunk Enterprise can be used to identify brute force attack behavior.
+
+---
+
+## Status
+
+✅ Completed
