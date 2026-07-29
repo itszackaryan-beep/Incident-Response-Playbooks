@@ -57,7 +57,7 @@ No malicious activity is performed during this stage.
 Shows successful network connectivity between Kali Linux and Windows Server 2022 using the ping command.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 00](screenshots/00_Lab_Connectivity.jpg.jpg)
 ---
 
 ## Screenshot 01 – Microsoft Sysmon Verification
@@ -73,7 +73,7 @@ Shows successful network connectivity between Kali Linux and Windows Server 2022
 Shows Microsoft Sysmon service running successfully on Windows Server 2022.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 01](screenshots/01_Sysmon_Service.jpg.jpg)
 ---
 
 ## Screenshot 02 – Splunk Log Collection Verification
@@ -89,7 +89,7 @@ Shows Microsoft Sysmon service running successfully on Windows Server 2022.
 Shows Splunk Enterprise successfully receiving Windows Sysmon events.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 02](screenshots/02_Splunk_Receiving_Logs.jpg.jpg)
 ---
 
 # Commands Used
