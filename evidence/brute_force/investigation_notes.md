@@ -510,3 +510,132 @@ The investigation successfully identified repeated failed authentication attempt
 ## Status
 
 ✅ Completed
+# Step 4 – IOC (Indicators of Compromise) Extraction
+
+## Objective
+
+Extract Indicators of Compromise (IOCs) from the collected Windows Security authentication events and identify valuable forensic information for incident investigation.
+
+---
+
+## Background
+
+Indicators of Compromise (IOCs) are pieces of evidence that help security analysts identify suspicious or malicious activity. During a brute force attack investigation, authentication logs provide important information such as usernames, hostnames, timestamps, source IP addresses, logon types, and event IDs.
+
+This step demonstrates how Splunk Enterprise can be used to extract and analyze authentication-related IOCs from Windows Security Event Logs.
+
+---
+
+## Lab Components
+
+| Component | Description |
+|-----------|-------------|
+| SIEM | Splunk Enterprise |
+| Log Source | Windows Security Event Logs |
+| Event IDs | 4624, 4625 |
+| Investigation | IOC Extraction |
+
+---
+
+## Tasks Performed
+
+- Searched Windows authentication events.
+- Extracted authentication-related IOCs.
+- Identified affected user accounts.
+- Reviewed timestamps.
+- Verified source host information.
+- Collected authentication details for further investigation.
+
+---
+
+## IOC Information Collected
+
+- Host Name
+- User Account
+- Event ID
+- Logon Type
+- Source Network Address (if available)
+- Timestamp
+
+---
+
+# Evidence
+
+## Screenshot 13 – IOC Extraction Query
+
+**Filename**
+
+```text
+13_IOC_Extraction_Query.jpg
+```
+
+**Description**
+
+Splunk search query used to extract authentication-related Indicators of Compromise (IOCs).
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 14 – IOC Information Table
+
+**Filename**
+
+```text
+14_IOC_Information_Table.jpg
+```
+
+**Description**
+
+Splunk table displaying extracted IOC information including host, username, event ID, logon type, source IP address, and timestamp.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 15 – Authentication Event Details
+
+**Filename**
+
+```text
+15_Authentication_Event_Details.jpg
+```
+
+**Description**
+
+Detailed view of a Windows Security authentication event showing important IOC fields collected during the investigation.
+
+> 📸 Place Screenshot Here
+
+---
+
+# SPL Queries
+
+### IOC Extraction
+
+```spl
+index=main (EventCode=4624 OR EventCode=4625)
+| table _time host Account_Name Source_Network_Address Logon_Type EventCode
+```
+
+---
+
+### Authentication Details
+
+```spl
+index=main (EventCode=4624 OR EventCode=4625)
+```
+
+Click any authentication event to review the detailed event fields.
+
+---
+
+## Result
+
+Authentication-related Indicators of Compromise (IOCs) were successfully extracted from Windows Security logs. Splunk Enterprise provided valuable forensic information including usernames, hostnames, timestamps, authentication status, and source information, enabling effective brute force attack investigation.
+
+---
+
+## Status
+
+✅ Completed
