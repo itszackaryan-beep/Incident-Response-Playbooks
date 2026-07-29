@@ -1,0 +1,71 @@
+===========================================================
+Data Exfiltration Detection - IOC Extraction
+===========================================================
+
+Investigation Date : 2026-07-29
+Investigator       : Zack Aryan
+
+===========================================================
+Indicators of Compromise (IOCs)
+===========================================================
+
+Timestamp          : 2026-07-29 05:19:59
+Host Name          : WIN-CIH5CI81EMR
+User               : WIN-CIH5CI81EMR\Administrator
+
+Process Name       : C:\Windows\explorer.exe
+
+Target Filename    : C:\Temp\Collected_Data\Collected_Data.zip
+
+Event ID           : 11
+
+===========================================================
+IOC Summary
+===========================================================
+
+Host
+-----
+WIN-CIH5CI81EMR
+
+User
+----
+Administrator
+
+Observed Activity
+-----------------
+Creation of temporary staging files and ZIP archive.
+
+Affected Files
+--------------
+Employee_Salary.xlsx
+Employee_Details.xlsx
+Customer_Database.csv
+Financial_Report_2026.xlsx
+HR_Records.docx
+Confidential_Project.pdf
+Collected_Data.zip
+
+Detection Source
+----------------
+Microsoft Sysmon
+
+Collected By
+------------
+Splunk Enterprise
+
+MITRE ATT&CK
+------------
+T1005 - Data from Local System
+T1074 - Data Staged
+T1560.001 - Archive via Utility
+
+Investigation Result
+--------------------
+The investigation confirmed that confidential files were collected into
+a temporary staging folder and compressed into a ZIP archive.
+No actual data exfiltration or external data transfer was observed during
+the simulation.
+
+Status
+------
+Verified
