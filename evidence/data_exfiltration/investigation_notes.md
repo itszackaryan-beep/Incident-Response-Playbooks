@@ -123,7 +123,7 @@ ipconfig
 ### Splunk Search
 
 ```spl
-index=main
+index=soc_lab EventCode=1
 ```
 
 or
