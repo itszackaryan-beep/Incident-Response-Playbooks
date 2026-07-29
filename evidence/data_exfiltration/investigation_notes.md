@@ -333,7 +333,7 @@ Confidential_Project.pdf
 Shows the Collected_Data folder containing the copied confidential files.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 05](screenshots/05_Data_Collection_Folder.jpg.jpg)
 ---
 
 ## Screenshot 06 – File Activity Detection in Splunk
@@ -349,7 +349,7 @@ Shows the Collected_Data folder containing the copied confidential files.
 Shows Microsoft Sysmon File Create (Event ID 11) events generated during the file copy operation.
 
 > 📸 Place Screenshot Here
-
+![Screenshot 06](screenshots/06_File_Activity_Detection_Splunk.jpg.jpg)
 ---
 
 ## SPL Query
