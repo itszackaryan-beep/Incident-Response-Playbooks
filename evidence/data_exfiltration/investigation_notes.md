@@ -375,3 +375,105 @@ The confidential files were successfully collected into a temporary staging fold
 ## Status
 
 ✅ Completed
+
+# Step 3 – Archive Creation (Data Staging)
+
+## Objective
+
+Simulate an attacker preparing collected files for exfiltration by compressing them into a ZIP archive and verify that Microsoft Sysmon records the file creation activity.
+
+---
+
+## Background
+
+Before data is transferred outside an organization, attackers often compress multiple files into a single archive. This reduces file size, keeps related documents together, and makes data transfer easier.
+
+In this lab, a safe simulation is performed by creating a ZIP archive containing dummy company files. No data is transmitted outside the lab environment.
+
+---
+
+## Tasks Performed
+
+- Opened the **Collected_Data** folder.
+- Selected all collected dummy files.
+- Created a ZIP archive named **Collected_Data.zip**.
+- Verified that the ZIP file was created successfully.
+- Confirmed that Microsoft Sysmon generated file creation events.
+- Verified that Splunk Enterprise collected the generated logs.
+
+---
+
+## Archive Location
+
+```text
+C:\Temp\Collected_Data\Collected_Data.zip
+```
+
+---
+
+## Observations
+
+- The ZIP archive was successfully created.
+- Microsoft Sysmon detected the archive creation activity.
+- Splunk Enterprise successfully indexed the generated events.
+- Archive creation represents the data staging phase before exfiltration.
+
+---
+
+# Evidence
+
+## Screenshot 06 – ZIP Archive Created
+
+**Filename**
+
+```text
+06_ZIP_Archive_Created.jpg
+```
+
+**Description**
+
+Shows the Collected_Data.zip archive successfully created inside the Collected_Data folder.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Screenshot 07 – ZIP File Detection in Splunk
+
+**Filename**
+
+```text
+07_ZIP_File_Detection_Splunk.jpg
+```
+
+**Description**
+
+Shows Microsoft Sysmon Event ID 11 related to the ZIP archive creation.
+
+> 📸 Place Screenshot Here
+
+---
+
+## SPL Query
+
+```spl
+index=soc_lab EventCode=11
+```
+
+Alternative
+
+```spl
+index=main EventCode=11
+```
+
+---
+
+## Result
+
+The ZIP archive was successfully created and Microsoft Sysmon recorded the associated file creation activity. Splunk Enterprise successfully indexed the event, demonstrating how data staging activities can be monitored before a potential data exfiltration attempt.
+
+---
+
+## Status
+
+✅ Completed
