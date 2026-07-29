@@ -5,24 +5,22 @@ IOC Extraction Report
 Investigation:
 Brute Force Authentication Investigation
 
-Host Name:
-_____________________________
+Host Name: WIN-CIH5CI81EMR
+______________________________________________________
 
-User Account:
-_____________________________
+User Account: Administrator
+_______________________________________________________
 
-Event IDs:
-4624
-4625
+Event IDs: 4625
+_____________________________________________________
+Logon Type: 2
+______________________________________________________
 
-Logon Type:
-_____________________________
+Source Network Address: 127.0.0.1 (Kali Linux IP)
+______________________________________________________
 
-Source Network Address:
-_____________________________
-
-Timestamp(s):
-_____________________________
+Timestamp(s):   2026-07-28 05:20:59
+______________________________________________________
 
 Detection Source:
 Windows Security Event Logs
