@@ -1,0 +1,45 @@
+===========================================================
+Microsoft Sysmon - File Create Event
+===========================================================
+
+Log Name       : Microsoft-Windows-Sysmon/Operational
+Source         : Microsoft-Windows-Sysmon
+Event ID       : 11
+Event Type     : File Create
+
+Timestamp      : 2026-07-29 05:19:59
+Host Name      : WIN-CIH5CI81EMR
+User           : WIN-CIH5CI81EMR\Administrator
+
+Process Name   : C:\Windows\explorer.exe
+
+Target File    : C:\Temp\Collected_Data\Collected_Data.zip
+
+Image          : C:\Windows\explorer.exe
+
+Description
+-----------
+Microsoft Sysmon detected a file creation event during the Data
+Exfiltration Detection lab. The event corresponds to the creation of
+the ZIP archive (Collected_Data.zip) after confidential files were
+copied into the temporary staging folder.
+
+Detection Source
+----------------
+Microsoft Sysmon (Event ID 11)
+
+Collected By
+------------
+Splunk Enterprise
+
+Investigation Notes
+-------------------
+- File activity successfully detected.
+- ZIP archive creation confirmed.
+- Event indexed in Splunk Enterprise.
+- Activity represents the data staging phase prior to a simulated
+  data exfiltration attempt.
+
+Status
+------
+Verified
