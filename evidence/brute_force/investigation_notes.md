@@ -861,3 +861,125 @@ The authentication events were successfully mapped to the MITRE ATT&CK framework
 ## Status
 
 ✅ Completed
+# Step 7 – Incident Response Summary
+
+## Objective
+
+Summarize the brute force attack investigation using the **NIST Incident Response Lifecycle** and document the actions taken during the investigation.
+
+---
+
+## Background
+
+Incident response is a structured process used by security teams to identify, analyze, contain, eradicate, and recover from cybersecurity incidents.
+
+In this lab, a simulated brute force attack was investigated using Windows Security Event Logs and Splunk Enterprise. The investigation followed the NIST Incident Response Framework to demonstrate a real-world SOC Analyst workflow.
+
+---
+
+## NIST Incident Response Lifecycle
+
+### 1. Detection
+
+- Splunk Enterprise detected multiple failed Windows authentication events (**Event ID 4625**).
+- Windows Security Event Logs successfully recorded all authentication attempts.
+- Authentication events were forwarded to Splunk Enterprise for analysis.
+
+---
+
+### 2. Analysis
+
+- Investigated repeated failed login attempts.
+- Verified successful authentication (**Event ID 4624**) after multiple failures.
+- Extracted authentication-related Indicators of Compromise (IOCs).
+- Built an authentication timeline.
+- Mapped the observed activity to the MITRE ATT&CK framework.
+
+---
+
+### 3. Containment
+
+The following actions are recommended to reduce the impact of brute force attacks:
+
+- Monitor repeated failed login attempts.
+- Enable Windows Account Lockout Policy.
+- Restrict Remote Desktop access to trusted systems.
+- Enable Multi-Factor Authentication (MFA) where applicable.
+- Continuously monitor authentication logs using Splunk.
+
+---
+
+### 4. Eradication
+
+Recommended remediation actions include:
+
+- Reset passwords for affected accounts.
+- Investigate unauthorized user accounts.
+- Review Windows Security policies.
+- Remove any suspicious remote access configurations.
+- Verify system integrity.
+
+---
+
+### 5. Recovery
+
+- Confirm that legitimate users can successfully authenticate.
+- Continue monitoring Event IDs **4624** and **4625**.
+- Verify that no additional suspicious authentication activity is occurring.
+- Resume normal system operations.
+
+---
+
+### 6. Lessons Learned
+
+This investigation demonstrated that:
+
+- Windows Security Event Logs provide valuable authentication evidence.
+- Splunk Enterprise effectively detects failed and successful authentication events.
+- IOC extraction improves incident investigations.
+- Timeline analysis simplifies attack reconstruction.
+- MITRE ATT&CK mapping improves threat classification.
+- The NIST Incident Response Lifecycle provides a structured investigation process.
+
+---
+
+# Evidence
+
+## Screenshot 20 – Incident Response Summary
+
+**Filename**
+
+```text
+20_Incident_Response_Summary.jpg
+```
+
+**Description**
+
+Final investigation summary documenting the Detection, Analysis, Containment, Eradication, Recovery, and Lessons Learned phases based on the NIST Incident Response Lifecycle.
+
+> 📸 Place Screenshot Here
+
+---
+
+## Project Conclusion
+
+The brute force attack simulation successfully demonstrated how Windows Security Event Logs and Splunk Enterprise can detect, investigate, and analyze repeated authentication failures in a controlled lab environment.
+
+The investigation covered:
+
+- Windows Security Event Collection
+- Failed Login Detection (Event ID 4625)
+- Successful Login Verification (Event ID 4624)
+- Brute Force Investigation
+- IOC Extraction
+- Incident Timeline Analysis
+- MITRE ATT&CK Mapping
+- NIST Incident Response Lifecycle
+
+This project demonstrates practical SOC Analyst skills including log analysis, threat detection, incident investigation, IOC extraction, and incident response using Microsoft Sysmon, Windows Security Logs, and Splunk Enterprise.
+
+---
+
+## Status
+
+✅ Project Completed Successfully
