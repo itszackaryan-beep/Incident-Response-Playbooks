@@ -123,7 +123,7 @@ ipconfig
 ### Splunk Search
 
 ```spl
-index=soc_lab EventCode=1
+index=main EventCode=1
 ```
 
 or
@@ -152,4 +152,4 @@ The lab environment was successfully configured for the Data Exfiltration Detect
 ## Status
 
 ✅ Completed
-> This file will be updated after completing the practical investigation.
+
