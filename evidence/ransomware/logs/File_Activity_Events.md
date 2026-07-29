@@ -2,10 +2,10 @@
 Microsoft Sysmon File Activity Log
 ==========================================
 
-Timestamp:
+Timestamp: 5:33:41 AM
 _________________________
 
-Host Name:
+Host Name: WIN-CIH5CI81EMR
 _________________________
 
 Event ID:
@@ -14,7 +14,7 @@ Event ID:
 Target Folder:
 Ransomware_Test
 
-Target File:
+Target File: README_RESTORE_FILES.txt
 _________________________
 
 Operation:
